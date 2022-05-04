@@ -17,6 +17,5 @@ public class DBConfiguration {
                         + "trustServerCertificate=false;"
                         + "loginTimeout=30;";
         return DriverManager.getConnection(connectionUrl);
-
     }
 }
