@@ -39,9 +39,9 @@ public class DemoMySqlWithJava {
                 .post(LOGIN_PATH);
 
         loginRes resAPI = new loginRes();
-        resAPI.setCompanyid(loginRes.jsonPath().getInt("companyid"));
-        resAPI.setCompanyname(loginRes.jsonPath().getString("companyname"));
-        resAPI.setUserlevel(loginRes.jsonPath().getInt("userlevel"));
+        resAPI.setCompanyId(loginRes.jsonPath().getInt("companyid"));
+        resAPI.setCompanyName(loginRes.jsonPath().getString("companyname"));
+        resAPI.setUserLevel(loginRes.jsonPath().getInt("userlevel"));
 
         // Connect DB and get user information
         Connection connection = dbConfiguration.createConnection();
@@ -54,9 +54,9 @@ public class DemoMySqlWithJava {
         loginRes resSQL = new loginRes();
 
         while (resultSet.next()) {
-            resSQL.setCompanyid(resultSet.getInt("company_id"));
-            resSQL.setCompanyname(resultSet.getString("company_name"));
-            resSQL.setUserlevel(resultSet.getInt("user_level"));
+            resSQL.setCompanyId(resultSet.getInt("company_id"));
+            resSQL.setCompanyName(resultSet.getString("company_name"));
+            resSQL.setUserLevel(resultSet.getInt("user_level"));
         }
 
         // Compare user information from API and SQL
