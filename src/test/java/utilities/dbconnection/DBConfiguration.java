@@ -19,3 +19,4 @@ public class DBConfiguration {
         return DriverManager.getConnection(connectionUrl);
     }
 }
+
